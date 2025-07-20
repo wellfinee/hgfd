@@ -59,3 +59,15 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 ---
 
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+
+## Steam Authentication
+
+To enable Steam sign-in, set the following environment variables before running Strapi:
+
+```
+STEAM_API_KEY=your_steam_api_key
+STEAM_RETURN_URL=https://your-strapi-host/connect/steam/callback
+STEAM_REALM=https://your-strapi-host
+```
+
+These values are used by the `passport-steam` strategy configured in `src/extensions/users-permissions/strapi-server.js`.
